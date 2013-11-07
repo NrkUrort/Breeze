@@ -15427,7 +15427,8 @@ breeze.AbstractDataServiceAdapter = (function () {
             var that = this;
             this.entityType.unmappedProperties.forEach(function(prop) {
                 var propName = prop.name;
-                rawEntity[propName] = that[propName];
+                //rawEntity[propName] = that[propName];
+                that[propName] = rawEntity[propName];
             });
             
             if (!this._backingStore) {
